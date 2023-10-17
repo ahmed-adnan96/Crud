@@ -1,0 +1,27 @@
+body {
+  background: #2c3e50 !important;
+  color: #dbe3eb !important;
+  font-family: monospace;
+}
+h2 {
+  color: #537596;
+}
+input {
+  font-size: 25px !important;
+}
+.add-Product--button {
+  color: #fff !important;
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+
+.table > :not(caption) > * > * {
+  color: #dbe3eb !important;
+  background-color: #2c3e50 !important;
+}
+td {
+  border-bottom: none !important;
+}
+.table-striped > tbody > tr:nth-of-type(2n + 1) > * {
+  --bs-table-bg-type: #34495e !important;
+}

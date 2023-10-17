@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrab-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawsome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- css main-->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Crud</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="product-details text-capitalize">
+            <h2 class="text-center">products</h2>
+            <label for="productName" class="my-2 fs-3 fw-bold"
+              >product name :
+            </label>
+            <input
+              type="text"
+              id="productName"
+              class="form-control w-100 py-2"
+            />
+            <label for="productPrice" class="my-2 fs-3 fw-bold"
+              >product price :
+            </label>
+            <input
+              type="number"
+              id="productPrice"
+              class="form-control w-100 py-2"
+            />
+            <label for="productCategory" class="my-2 fs-3 fw-bold"
+              >product category :
+            </label>
+            <input
+              type="text"
+              id="productCategory"
+              class="form-control w-100 py-2"
+            />
+            <label for="productDescrip" class="my-2 fs-3 fw-bold"
+              >product describe :
+            </label>
+            <textarea class="form-control w-100" id="productDescrip"></textarea>
+            <button
+              class="btn btn-primary w-100 w-25 py-2 fs-5 text-capitalize fw-bold mt-3 add-Product--button d-block"
+              id="addPro"
+              onclick="addProduct()"
+            >
+              add product
+            </button>
+            <button
+              class="btn btn-warning w-100 py-2 fs-5 text-capitalize fw-bold mt-3 text-white d-none"
+              id="updatePro"
+              onclick="getUpdate()"
+            >
+              update product
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <input
+        type="search"
+        placeholder="search by name ..."
+        onInput="searchProduct(this.value)"
+        class="form-control w-100 py-1 mb-5"
+      />
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <table class="table table-striped text-center">
+              <thead class="fs-4">
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </thead>
+              <tbody class="fs-5" id="showProducts"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
